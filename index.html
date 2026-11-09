@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JEDDA'S SKINS BEAUTY COSMETICS STORE</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#fff8fb;color:#35202d}
+header{background:#52183f;color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:21px;font-weight:bold;color:#ffd88a}
+nav a{color:white;text-decoration:none;margin:10px;font-size:14px}
+.hero{padding:80px 7%;background:linear-gradient(90deg,#42132eaa,#42132e55),url('https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=1600&q=85') center/cover;color:white}
+.hero h1{font-size:clamp(35px,7vw,65px);margin-bottom:20px}
+.hero p{font-size:18px;line-height:1.7;max-width:600px}
+.btn{display:inline-block;background:#f5c779;color:#42132e;padding:15px 25px;border-radius:30px;text-decoration:none;font-weight:bold;margin-top:20px}
+section{padding:55px 6%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:32px;color:#7b245c;margin-bottom:10px}
+.heading p{color:#876b80}
+.categories{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.categories button{padding:12px 20px;border:1px solid #e5b7d2;border-radius:25px;background:white;color:#7b245c;cursor:pointer}
+.categories button:hover{background:#7b245c;color:white}
+.search{display:block;width:100%;max-width:500px;margin:0 auto 30px;padding:15px;border:1px solid #e5b7d2;border-radius:25px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 5px 20px #42132e12;border:1px solid #f2e2ed}
+.card img{width:100%;height:230px;object-fit:cover}
+.card h3{padding:15px 15px 8px;color:#7b245c}
+.card p{padding:0 15px 15px;color:#806b79;line-height:1.5}
+.order{display:block;background:#25a65a;color:white;text-align:center;padding:13px;margin:15px;border-radius:8px;text-decoration:none;font-weight:bold}
+.about{background:#fbeaf3;text-align:center;line-height:1.9}
+.about h2{font-size:32px;color:#7b245c;margin-bottom:20px}
+.about p{max-width:750px;margin:auto}
+.community{text-align:center;background:#fff0f7}
+.community h2{color:#7b245c;font-size:30px}
+.contact{background:#52183f;color:white;text-align:center;line-height:1.8}
+.contact h2{font-size:32px;margin-bottom:15px}
+footer{background:#321027;color:white;text-align:center;padding:25px;font-size:14px}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav{margin-top:15px}nav a{margin:6px}.hero{padding:60px 6%}}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">JEDDA'S SKINS BEAUTY COSMETICS STORE</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Shop</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact Us</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<h1>Glow Naturally.<br>Shine Confidently.</h1>
+<p>Discover your beauty with our collection of skincare, cosmetics and personal-care essentials.</p>
+<a href="#products" class="btn">SHOP BEAUTY COLLECTION</a>
+</div>
+
+<section id="products">
+<div class="heading">
+<h2>Our Beauty Collection</h2>
+<p>Discover beauty essentials for your daily self-care routine.</p>
+</div>
+
+<input class="search" id="search" placeholder="Search beauty products..." oninput="filterProducts()">
+
+<div class="categories">
+<button onclick="filterCategory('All')">All Products</button>
+<button onclick="filterCategory('Body Care')">Body Care</button>
+<button onclick="filterCategory('Face Care')">Face Care</button>
+<button onclick="filterCategory('Sun Care')">Sun Care</button>
+<button onclick="filterCategory('Supplements')">Supplements</button>
+</div>
+
+<div class="grid" id="productGrid">
+
+<div class="card" data-category="Body Care">
+<img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=700&q=85">
+<h3>Body Lotions</h3>
+<p>Moisturizing body-care essentials.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20I%20want%20Body%20Lotion">Order on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Body Care">
+<img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=85">
+<h3>Body Wash</h3>
+<p>Refreshing cleansing essentials.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20I%20want%20Body%20Wash">Order on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Face Care">
+<img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=85">
+<h3>Face Wash & Cleansers</h3>
+<p>Daily facial cleansing products.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20I%20want%20Face%20Wash">Order on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Face Care">
+<img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=85">
+<h3>Face Creams</h3>
+<p>Facial moisturizers and skincare essentials.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20I%20want%20Face%20Cream">Order on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Face Care">
+<img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=85">
+<h3>Face Serums</h3>
+<p>Discover facial serum options.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20I%20want%20Face%20Serum">Order on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Sun Care">
+<img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=85">
+<h3>Sunscreens</h3>
+<p>Sun-care essentials for everyday routines.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20I%20want%20Sunscreen">Order on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Supplements">
+<img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=85">
+<h3>Beauty Supplements</h3>
+<p>Ask about available beauty supplements.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20Beauty%20Supplements">Ask on WhatsApp</a>
+</div>
+
+<div class="card" data-category="Supplements">
+<img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=85">
+<h3>Beauty Gummies</h3>
+<p>Explore our available beauty gummies.</p>
+<a class="order" href="https://wa.me/2349130105373?text=Hello%2C%20Beauty%20Gummies">Ask on WhatsApp</a>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>ABOUT JEDDA'S</h2>
+<p>Welcome to JEDDA'S SKINS BEAUTY COSMETICS STORE, your destination for skincare, cosmetics and beauty essentials. We are passionate about helping you discover products that complement your beauty and self-care routine.</p>
+<br>
+<strong>Glow Naturally. Shine Confidently.</strong>
+</section>
+
+<section class="community">
+<h2>Join Our Beauty Community</h2>
+<p>Connect with beauty lovers, discover new arrivals and receive product updates.</p>
+<a class="btn" href="https://chat.whatsapp.com/FzlVI4GwDOF2QGXWBf3Zt2?s=cl&p=a&iam=2" target="_blank">JOIN OUR WHATSAPP GROUP</a>
+</section>
+
+<section class="contact" id="contact">
+<h2>WELCOME TO JEDDA'S!</h2>
+<p>Thank you for visiting our beauty store.</p>
+<p>We offer skincare products, body-care essentials, cosmetics, beauty supplements and more.</p>
+<p>Contact us for product information, prices and orders.</p>
+<p><strong>WhatsApp: 09130105373</strong></p>
+<a class="btn" href="https://wa.me/2349130105373?text=Hello%20Jedda%27s%20Skin%20Beauty%20Cosmetics%20Store">CONTACT US ON WHATSAPP</a>
+</section>
+
+<footer>
+<p>JEDDA'S SKINS BEAUTY COSMETICS STORE</p>
+<p>Glow Naturally. Shine Confidently.</p>
+<p>© 2026 All Rights Reserved.</p>
+</footer>
+
+<script>
+function filterCategory(category){
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=(category==='All'||card.dataset.category===category)?'block':'none';
+});
+}
+function filterProducts(){
+let value=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(value)?'block':'none';
+});
+}
+</script>
+
+</body>
+</html>
